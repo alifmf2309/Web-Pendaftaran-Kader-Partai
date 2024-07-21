@@ -1,0 +1,87 @@
+{% include 'header.html' %}
+
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <div class="content-header">
+      <div class="container-fluid">
+        <div class="row mb-2">
+          <div class="col-sm-6">
+            <h1 class="m-0"><strong>Form Registrasi</strong></h1>
+          </div><!-- /.col -->
+          <div class="col-sm-6">
+          </div><!-- /.col -->
+        </div><!-- /.row -->
+      </div><!-- /.container-fluid -->
+    </div>
+    <!-- /.content-header -->
+    <!-- Main content -->
+    <section class="content">
+      <div class="container-fluid">
+      </div><!-- /.container-fluid -->
+      <div class="row">
+        <div class="col-md-12">
+            <!-- general form elements -->
+            <div class="card card-primary">
+              <div class="card-header" style="background-color: yellow;">
+                <h3 class="card-title" style="color: black;">Tambah Kader Baru</h3>
+              </div>
+              <!-- /.card-header -->
+              <!-- form start -->
+              <form role="form" action="/simpanformregistrasi" method="POST" enctype="multipart/form-data">
+                <div class="card-body">
+                  <div class="form-group">
+                    <label for="nama">Nama Lengkap</label>
+                    <input type="text" class="form-control" id="nama" name ="nama" placeholder="Masukkan Nama Lengkap">
+                  </div>
+                  <div class="form-group">
+                    <label for="alamat">Alamat</label>
+                    <input type="text" class="form-control" id="alamat" name ="alamat" placeholder="Masukkan Alamat">
+                  </div>
+                  <div class="form-group">
+                    <label for="notelp">No HP</label>
+                    <input type="text" class="form-control" id="notelp" name ="notelp" placeholder="Masukkan No HP">
+                  </div>
+                  <div class="form-group">
+                    <label for="tgl">Tanggal Lahir</label>
+                    <input type="text" class="form-control" id="tgl" name ="tgl" placeholder="Masukkan Tanggal Lahir">
+                  </div>
+                  <div class="form-group">
+                    <label for="pekerjaan">Pekerjaan</label>
+                    <input type="text" class="form-control" id="pekerjaan" name ="pekerjaan" placeholder="Masukkan Pekerjaan">
+                  </div>
+                  <div class="form-group">
+                    <label for="jk">Jenis Kelamin</label>
+                    <input type="text" class="form-control" id="jk" name ="jk" placeholder="Masukkan Jenis Kelamin">
+                  </div>
+                  <div class="form-group">
+                    <label for="agama">Agama</label>
+                    <input type="text" class="form-control" id="agama" name ="agama" placeholder="Masukkan Agama">
+                  </div>
+                  <div class="form-group">
+                    <label for="ab">Alasan Bergabung</label>
+                    <textarea class="form-control" id="ab" name="ab" rows="4" placeholder="Isi dengan alasan yang jelas"></textarea>
+                  </div>
+                  <div class="form-group">
+                    <label for="foto">Foto</label>
+                    <input type="file" class="form-control-file" id="foto" name="foto">
+                    <small class="form-text text-muted">Ukuran foto harus 3x4. dengan format penamaan PT_nama kader.jpg. Format foto berupa <b>JPG</b>.</b></small>
+                  </div>
+                </div>
+
+                <!-- /.card-body -->
+
+                <div class="card-footer">
+                  <button type="submit" class="btn btn-primary" style="background-color: yellow; color: black;">Kirim</button>
+                </div>
+              </form>
+            </div>
+            <!-- /.card -->
+      </div>
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+
+  {% include 'footer.html' %}

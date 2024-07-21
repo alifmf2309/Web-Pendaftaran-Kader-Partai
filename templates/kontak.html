@@ -1,0 +1,267 @@
+{% include 'header.html' %}
+</br>
+</br>
+</br>
+<div class="content-wrapper">
+    <section class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <div class="hero-image">
+            <img src="static/dist/img/hero-background.jpg" alt="Hero Background Image">
+          </div>
+    
+          <div class="hero-text">
+            <h1>Hubungi Kami</h1>
+            <p>Mari Wujudkan Inovasi Teknologi di Indonesia Menjadi Lebih Baik bersama Partai TENISIA!</p>
+          </div>
+        </div>
+
+        <div class="contact-info-grid">
+            <div class="contact-item">
+              <i class="fas fa-map-marker-alt"></i>
+              <p><b style="color: #040404;">Mabes Partai Tenisia</b></p> - <b style="color: #040404;">(-8.1251505, 110.2593513)</b></p>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-phone"></i>
+              <p><b><a href="tel:+6281234567890" style="color: black;">(+62) 822-7830-4535</a></b></p>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-envelope"></i>
+              <p><b><a href="mailto:info@partaitenisia.com" style="color: #040404;">info@partaitenisia.com</a></b></p>
+            </div>
+            <div class="contact-item">
+              <i class="fas fa-globe"></i>
+              <p><b><a href="https://www.partaitenisia.com" target="_blank" style="color: #040404;">www.partaitenisia.com</a></b></p>
+            </div>
+          </div>
+          
+          <div class="social-media-icons">
+            <ul>
+              <li><a href="#" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+              <li><a href="#" target="_blank"><i class="fab fa-instagram"></i></a></li>
+              <li><a href="#" target="_blank"><i class="fab fa-youtube"></i></a></li>
+            </ul>
+          </div>
+        </div>  
+      </div>
+    </section>
+  </div>
+  
+  
+<style>
+.contact-info-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  text-align: center;
+  position: relative; /* Required for text animation */
+  animation: hero-text-fade-in 3s ease-in-out; /* Example animation */
+}
+
+.contact-item {
+  background-color: #f9f9f9;
+  color: #040404;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  position: relative; /* Required for text animation */
+  animation: hero-text-fade-in 3s ease-in-out; /* Example animation */
+}
+
+.contact-item i {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 10px;
+  display: block;
+  position: relative; /* Required for text animation */
+  animation: hero-text-fade-in 3s ease-in-out; /* Example animation */
+}
+
+.contact-item p {
+  margin: 0;
+  color: #040404;
+  position: relative; /* Required for text animation */
+  animation: hero-text-fade-in 3s ease-in-out; /* Example animation */
+}
+
+.contact-item b {
+  font-size: 16px;
+  color: #555;
+  position: relative; /* Required for text animation */
+  animation: hero-text-fade-in 3s ease-in-out; /* Example animation */
+}
+
+.social-media-icons {
+  margin-top: 20px;
+  position: relative; /* Required for text animation */
+  animation: hero-text-fade-in 3s ease-in-out; /* Example animation */
+}
+
+.social-media-icons ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  position: relative; /* Required for text animation */
+  animation: hero-text-fade-in 3s ease-in-out; /* Example animation */
+}
+
+.social-media-icons ul li {
+    display: inline-block;
+    margin-right: 10px; /* Jarak antar ikon */
+    padding: 10px;
+    border-radius: 50%; /* Membuat ikon berbentuk lingkaran */
+    transition: background-color 0.3s ease;
+    position: relative; /* Required for text animation */
+    animation: hero-text-fade-in 3s ease-in-out; /* Example animation */
+}
+
+.social-media-icons ul li a {
+    color: #fff; /* Warna teks putih */
+    font-size: 20px;
+    display: block;
+    position: relative; /* Required for text animation */
+    animation: hero-text-fade-in 3s ease-in-out; /* Example animation */
+}
+
+.social-media-icons ul li {
+    list-style-type: none; /* Menghilangkan bullet point */
+    width: 50px; /* Lebar ikon */
+    height: 50px; /* Tinggi ikon */
+    text-align: center; /* Posisi teks ke tengah */
+    line-height: 50px; /* Mengatur tinggi baris untuk ikon vertikal */
+    margin-right: 10px; /* Margin antar ikon */
+    border-radius: 50%; /* Membuat ikon menjadi lingkaran */
+    position: relative; /* Diperlukan untuk animasi teks */
+    animation: hero-text-fade-in 3s ease-in-out; /* Contoh animasi */
+}
+
+.social-media-icons ul li:nth-child(1) {
+    background-color: #3b5998; /* Warna biru Facebook */
+}
+
+.social-media-icons ul li:nth-child(2) {
+    background-color: #e4405f; /* Warna merah Instagram */
+}
+
+.social-media-icons ul li:nth-child(3) {
+    background-color: #ff0000; /* Warna merah YouTube */
+}
+
+.social-media-icons ul li:hover {
+    background-color: #21b300; /* Warna hijau saat dihover */
+    position: relative; /* Required for text animation */
+    animation: hero-text-fade-in 3s ease-in-out; /* Example animation */
+}
+.contact {
+  background-image: url('static/dist/img/photo1.png'); /* Replace with an image overlay */
+  background-size: cover;
+  background-position: center;
+  padding: 100px 0; /* Increased padding for more breathing room */
+  text-align: center;
+  position: relative;
+  color: #fbf4f4; /* Text color should contrast with background image */
+}
+
+.contact::before { /* Create an overlay to dim the background image */
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.contact h2 {
+  font-size: 80px; /* Significantly increased font size for a grander heading */
+  font-weight: bold;
+  color: #fbfafa;
+  margin-bottom: 40px;
+}
+
+.contact p {
+  font-size: 24px; /* Even larger font size for better readability */
+  line-height: 1.7;
+  color: #fcfafa; /* Text color should contrast with background image */
+  margin-bottom: 40px;
+}
+
+.contact-header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: left;
+  width: 60%; /* Wider header for more impact */
+  margin: 0 auto; /* Center the header within the container */
+  padding: 40px 20px; /* Increased padding for more spacing */
+  border-radius: 20px; /* More rounded corners for a softer look */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Stronger shadow */
+  background-color: #2e2b2b; /* Vibrant blue-purple background */
+  color: #fff; /* White text for better readability */
+}
+.hero {
+  background-color: #ffff02; /* Light gray background */
+  padding: 100px 0; /* Increase padding for space */
+  text-align: center;
+  position: relative; /* Required for parallax effect */
+}
+
+.hero::after {
+  content: ""; /* Add an empty after element */
+  display: block; /* Make it visible */
+  position: absolute; /* Position for parallax effect */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(146, 141, 141, 0.288), rgba(201, 194, 194, 0.381)); /* Overlay with gradient */
+}
+
+.hero-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  z-index: -1; /* Place behind the hero text */
+}
+
+.hero-text {
+  position: relative; /* Required for text animation */
+}
+
+.hero h1 {
+  font-size: 48px; /* Larger font size */
+  font-weight: bold;
+  color: #040404; /* Blue heading color */
+  animation: hero-text-fade-in 3s ease-in-out; /* Example animation */
+}
+
+@keyframes hero-text-fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.hero p {
+  font-size: 18px; /* Medium font size */
+  line-height: 1.7; /* Increase line height for better readability */
+  margin-bottom: 20px; /* Add spacing between paragraphs */
+  color: #333; /* Dark gray color for body text */
+}
+
+.hero button {
+  background-color: #070707; /* Blue button color */
+  color: white;
+  padding: 15px 30px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Hover effect */
+  font-size: 16px; /* Larger button font size */
+}
+</style>
+
+{% include 'footer.html' %}

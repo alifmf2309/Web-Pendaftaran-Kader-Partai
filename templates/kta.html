@@ -1,0 +1,87 @@
+{% include 'header.html' %}
+
+</br>
+</br>
+
+<style>
+    .content-wrapper {
+        padding: 20px; /* Menambahkan padding di sekitar konten */
+    }
+
+    .photo-table {
+        width: 100%;
+        border-collapse: collapse; /* Menggabungkan garis tepi sel */
+        margin-top: 20px; /* Margin atas untuk meletakkan jarak dari header */
+    }
+
+    .photo-table th, .photo-table td {
+        padding: 10px;
+        text-align: center;
+        border: 1px solid #ddd; /* Garis tepi sel */
+    }
+
+    .photo-table th {
+        background-color: #f2f2f2; /* Warna latar belakang untuk header kolom */
+        color: #333; /* Warna teks untuk header kolom */
+    }
+
+    .photo-table tbody tr:nth-child(even) {
+        background-color: #f9f9f9; /* Warna latar belakang untuk baris genap */
+    }
+
+    .photo-table tbody tr:hover {
+        background-color: #f2f2f2; /* Warna latar belakang saat hover */
+    }
+
+    .photo-table img {
+        max-width: 100px; /* Lebar maksimum untuk gambar */
+        height: auto; /* Tinggi disesuaikan sesuai proporsi aslinya */
+        object-fit: cover; /* Memastikan gambar mengisi ruang yang tersedia */
+        display: block; /* Menghilangkan ruang tambahan di bawah gambar */
+        margin: 0 auto; /* Posisi gambar di tengah sel */
+    }
+</style>
+
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <h1><strong>e-KTA Partai Tenisia</strong></h1>
+                </div>
+            </div>
+        </div><!-- /.container-fluid -->
+    </section>
+    <!-- /.content-header -->
+    <!-- Main content -->
+    <div class="container">
+        <h2>Download e-KTA Partai Tenisia</h2>
+        <table class="photo-table">
+            <thead>
+                <tr>
+                    <th>NAMA LENGKAP</th>
+                    <th>PAS FOTO</th>
+                    <th>DOWNLOAD</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for member in data %}
+                <tr>
+                    <td>{{ member[1] }}</td>
+                    <td>
+                        {% set image_url = url_for('display_photo', member_id=member[0]) %}
+                        <img src="{{ image_url }}" alt="{{ member[1] }}">
+                    </td>
+                    <td><a href="{{ url_for('download_photo', member_id=member[0]) }}">Download</a></td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+    <!-- /.container -->
+</div>
+<!-- /.content-wrapper -->
+
+{% include 'footer.html' %}

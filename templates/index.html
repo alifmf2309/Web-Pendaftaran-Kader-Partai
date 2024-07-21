@@ -1,0 +1,173 @@
+{% include 'header.html' %}
+
+  <!-- Content Wrapper. Contains page content -->
+  <div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="hero">
+      <div class="container">
+        <div class="hero-content">
+          <div class="hero-image">
+            <img src="static/dist/img/hero-background.jpg" alt="Hero Background Image">
+          </div>
+    
+          <div class="hero-text">
+            <img src="static/dist/img/logo.png" alt="Logo Partai" class="logo">
+            <h1>Partai TENISIA</h1>
+            <p>Gerakan Inovasi untuk Masa Depan Teknologi Indonesia</p>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+    
+    <section class="visi-misi">
+      <div class="container">
+        <h2>Visi</h2> <p>Mewujudkan Indonesia sebagai pusat inovasi teknologi global yang Berdaya Saing Tinggi, Berkelanjutan, Aman & Inklusif.
+        </p> <h2>Misi</h2> <ul class="misi-list">
+          <li>Mendorong Pendidikan TeknologI
+          </li> <li>Mengembangkan Infrastruktur Digital
+          </li> <li>Memperkuat Ekosistem Inovasi Teknologi
+          </li> <li>Mendorong Kewirausahaan Teknologi
+          </li> <li>Memastikan Regulasi yang Mendukung dan Keamanan Siber
+          </li> <li>Mengintegrasikan Keamanan Siber dalam Semua Aspek Teknologi
+          </li></ul>
+      </div>
+    </section>
+    
+    <style>
+.hero {
+  background-color: #ffff02; /* Light gray background */
+  padding: 100px 0; /* Increase padding for space */
+  text-align: center;
+  position: relative; /* Required for parallax effect */
+}
+
+.hero::after {
+  content: ""; /* Add an empty after element */
+  display: block; /* Make it visible */
+  position: absolute; /* Position for parallax effect */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, rgba(146, 141, 141, 0.288), rgba(201, 194, 194, 0.381)); /* Overlay with gradient */
+}
+
+.hero-image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  z-index: -1; /* Place behind the hero text */
+}
+
+.hero-text {
+  position: relative; /* Required for text animation */
+}
+
+.hero h1 {
+  font-size: 48px; /* Larger font size */
+  font-weight: bold;
+  color: #040404; /* Blue heading color */
+  animation: hero-text-fade-in 3s ease-in-out; /* Example animation */
+}
+
+@keyframes hero-text-fade-in {
+  from { opacity: 50; }
+  to { opacity: 50; }
+}
+
+.hero p {
+  font-size: 18px; /* Medium font size */
+  line-height: 1.7; /* Increase line height for better readability */
+  margin-bottom: 20px; /* Add spacing between paragraphs */
+  color: #0a0a0a; /* Dark gray color for body text */
+}
+
+.hero button {
+  background-color: #070707; /* Blue button color */
+  color: white;
+  padding: 15px 30px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Hover effect */
+  font-size: 16px; /* Larger button font size */
+}
+    
+/* Additional CSS for Visi Misi Section */
+
+.visi-misi {
+  background-color: #fff; /* White background */
+  padding: 100px 0; /* Maintain padding for space */
+  text-align: center; /* Center the text */
+  border-top: 5px solid #090909; /* Add a thick blue border at the top */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+}
+
+.visi-misi h2 {
+  font-size: 40px; /* Increase heading size further */
+  font-weight: bold; /* Keep bold text */
+  margin-bottom: 30px; /* Maintain spacing */
+  color: #0b0c0c; /* Blue color for headings */
+}
+
+.visi-misi p {
+  font-size: 18px; /* Maintain body text size */
+  line-height: 1.7; /* Increase line height for even better readability */
+  margin-bottom: 20px; /* Maintain spacing */
+  color: #070707; /* Dark gray color for body text */
+}
+
+.visi-misi h2:after {
+  content: ""; /* Add an empty after element */
+  display: block; /* Make it visible */
+  width: 100px; /* Set width */
+  height: 5px; /* Set height for a thin line */
+  background-color: #050505; /* Blue color for the line */
+  margin: 10px auto 0; /* Add spacing below the heading and center horizontally */
+}
+
+.misi-list {
+  display: flex; /* Arrange list items horizontally */
+  flex-wrap: wrap; /* Allow items to wrap to multiple lines if needed */
+  justify-content: center; /* Center the list items horizontally */
+  margin: 0 auto; /* Center the list horizontally within its container */
+}
+
+.misi-list li {
+  flex: 1 0 25%; /* Set a minimum width for each list item (25%) */
+  margin: 10px; /* Add spacing between list items */
+  padding: 20px; /* Increase padding for more content space */
+  background-color: #fff; /* White background */
+  border-radius: 5px; /* Rounded corners */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+  text-align: center; /* Center the content within each list item */
+  cursor: pointer; /* Change cursor to indicate clickability */
+  transition: all 0.3s ease; /* Smooth transition on hover */
+}
+
+.misi-list li:hover {
+  transform: scale(1.05); /* Slightly enlarge on hover */
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+}
+
+.misi-list li h3 {
+  font-size: 18px; /* Heading size for mission titles */
+  margin-bottom: 5px; /* Add spacing below titles */
+}
+
+.misi-list li p {
+  font-size: 16px; /* Body text size */
+  line-height: 1.5; /* Improve line spacing for readability */
+}
+
+
+    </style>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+
+  {% include 'footer.html' %}

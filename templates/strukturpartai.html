@@ -1,0 +1,242 @@
+{% include 'header.html' %}
+</br>
+</br>
+</br>
+</br>
+<div class="content-wrapper">
+  <section class="hero">
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-image">
+          <img src="static/dist/img/hero-background.jpg" alt="Hero Background Image">
+        </div>
+
+        <div class="hero-text">
+          <h1>Struktur Partai Tenisia & Persentase Kontribusi Anggota Kelompok 9 - Pengolahan Basis Data</h1>
+        </div>
+        </br>
+        </br>
+        </br>
+        <div class="member">
+          <div class="member-name"><b>Muhammad Hidayatullah Ipango - 22.83.0820 - Dewan Penasehat Partai Tenisia</b></div>
+          <div class="progress">
+            <div class="progress-bar" style="width: 20%;">
+              <span id="progress-text1">1%</span>
+            </div>
+          </div>
+        </div>
+
+      </br>
+
+        <div class="member">
+          <div class="member-name"><b>Munif Aryaputra - 22.83.0787 - Ketua Umum Partai Tenisia</b></div>
+          <div class="progress">
+            <div class="progress-bar1" style="width: 20%;">
+              <span id="progress-text1">1%</span>
+            </div>
+          </div>
+        </div>
+
+      </br>
+
+        <div class="member">
+          <div class="member-name"><b>Alif Miftakhul Firdaus - 22.83.0816 - Sekretaris Jenderal Partai Tenisia</b></div>
+          <div class="progress">
+            <div class="progress-bar2" style="width: 20%;">
+              <span id="progress-text1">1%</span>
+            </div>
+          </div>
+        </div>
+
+      </br>
+
+        <div class="member">
+          <div class="member-name"><b>Muhammad Fahrun Nasyit - 22.83.0790 - Bendahara Umum Partai Tenisia</b></div>
+          <div class="progress">
+            <div class="progress-bar3" style="width: 20%;">
+              <span id="progress-text1">1%</span>
+            </div>
+          </div>
+        </div>
+
+      </br>
+
+        <div class="member">
+          <div class="member-name"><b>Egar Athwal Mahali - 22.83.0781 - Koordinator Pemenangan Pemilu Partai Tenisia</b></div>
+          <div class="progress">
+            <div class="progress-bar4" style="width: 20%;">
+              <span id="progress-text1">1%</span>
+            </div>
+        </div>
+    </div>
+  </section>
+
+
+    <style>
+      .container {
+          max-width: 800px;
+          margin: 0 auto;
+          padding: 20px;
+        }
+        .member {
+          margin-bottom: 20px;
+        }
+        .member-name {
+          font-weight: bold;
+          margin-bottom: 10px;
+          text-align: left;
+          position: relative;
+          animation: hero-text-fade-in 3s ease-in-out; /* Example animation */
+        }
+        .progress {
+          height: 20px;
+          margin-bottom: 10px;
+          background-color: #ffffff;
+          border-radius: 5px;
+          overflow: hidden;
+          position: relative;
+          animation: hero-text-fade-in 3s ease-in-out; /* Example animation */
+        }
+        .progress-bar {
+          height: 100%;
+          line-height: 20px;
+          text-align: center;
+          color: #fff;
+          background-color: #000000;
+          transition: width 0.5s ease;
+          position: relative;
+          animation: hero-text-fade-in 3s ease-in-out; /* Example animation */
+        }
+        .progress-bar1 {
+          height: 100%;
+          line-height: 20px;
+          text-align: center;
+          color: #fff;
+          background-color: #000000;
+          transition: width 0.5s ease;
+          position: relative;
+          animation: hero-text-fade-in 3s ease-in-out; /* Example animation */
+        }
+        .progress-bar2 {
+          height: 100%;
+          line-height: 20px;
+          text-align: center;
+          color: #fff;
+          background-color: #000000;
+          transition: width 0.5s ease;
+          position: relative;
+          animation: hero-text-fade-in 3s ease-in-out; /* Example animation */
+        }
+        .progress-bar3 {
+          height: 100%;
+          line-height: 20px;
+          text-align: center;
+          color: #fff;
+          background-color: #000000;
+          transition: width 0.5s ease;
+          position: relative;
+          animation: hero-text-fade-in 3s ease-in-out; /* Example animation */
+        }
+        .progress-bar4 {
+          height: 100%;
+          line-height: 20px;
+          text-align: center;
+          color: #fff;
+          background-color: #000000;
+          transition: width 0.5s ease;
+          position: relative;
+          animation: hero-text-fade-in 3s ease-in-out; /* Example animation */
+        }
+        .hero {
+          background-color: #ffff02; /* Light gray background */
+          padding: 100px 0; /* Increase padding for space */
+          text-align: center;
+          position: relative; /* Required for parallax effect */
+        }
+
+        .hero::after {
+          content: ""; /* Add an empty after element */
+          display: block; /* Make it visible */
+          position: absolute; /* Position for parallax effect */
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: linear-gradient(to bottom, rgba(146, 141, 141, 0.288), rgba(201, 194, 194, 0.381)); /* Overlay with gradient */
+        }
+
+        .hero-image {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-size: cover;
+          background-position: center;
+          z-index: -1; /* Place behind the hero text */
+        }
+
+        .hero-text {
+          position: relative; /* Required for text animation */
+        }
+
+        .hero h1 {
+          font-size: 35px; /* Larger font size */
+          font-weight: bold;
+          color: #040404; /* Blue heading color */
+          animation: hero-text-fade-in 3s ease-in-out; /* Example animation */
+        }
+
+        @keyframes hero-text-fade-in {
+          from { opacity: 0; }
+          to { opacity: 1; }
+        }
+
+        .hero p {
+          font-size: 18px; /* Medium font size */
+          line-height: 1.7; /* Increase line height for better readability */
+          margin-bottom: 20px; /* Add spacing between paragraphs */
+          color: #333; /* Dark gray color for body text */
+        }
+
+        .hero button {
+          background-color: #070707; /* Blue button color */
+          color: white;
+          padding: 15px 30px;
+          border: none;
+          cursor: pointer;
+          transition: background-color 0.3s ease; /* Hover effect */
+          font-size: 16px; /* Larger button font size */
+        }
+    </style>
+    <script>
+      // Function untuk menganimasikan progress bar
+      function animateProgressBars() {
+        const progressBars = document.querySelectorAll('.progress-bar,.progress-bar1, .progress-bar2, .progress-bar3, .progress-bar4');
+        const progressTexts = document.querySelectorAll('[id^=progress-text]');
+
+        progressBars.forEach((bar, index) => {
+          const targetWidth = parseInt(bar.style.width);
+          let currentWidth = 1; // Dimulai dari 1%
+
+          const interval = setInterval(() => {
+            if (currentWidth >= targetWidth) {
+              clearInterval(interval);
+            } else {
+              currentWidth++;
+              bar.style.width = currentWidth + '%';
+              progressTexts[index].textContent = currentWidth + '%'; // Update teks persentase
+            }
+          }, 120); // Mengurangi interval untuk animasi yang lebih halus
+        });
+      }
+
+      // Panggil fungsi ketika jendela selesai dimuat
+      window.onload = function() {
+        animateProgressBars();
+      };
+    </script>
+    </div>
+</div>
+
+  {% include 'footer.html' %}

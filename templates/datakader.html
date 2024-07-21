@@ -1,0 +1,105 @@
+{% include 'header.html' %}
+
+</br>
+</br>
+
+<style>
+    .content-wrapper {
+        padding: 20px; /* Tambahkan padding di sekitar konten */
+    }
+
+    .table-bordered {
+        width: 100%;
+        border-collapse: collapse; /* Gabungkan garis tepi sel */
+        margin-top: 20px; /* Jarak antara header dengan tabel */
+    }
+
+    .table-bordered th,
+    .table-bordered td {
+        padding: 8px; /* Atur padding untuk sel tabel */
+        text-align: center; /* Pusatkan teks di sel tabel secara horizontal */
+        vertical-align: middle; /* Pusatkan teks secara vertikal di sel tabel */
+        border: 1px solid #ddd; /* Garis tepi sel */
+    }
+
+    .table-bordered th {
+        background-color: #f2f2f2; /* Warna latar belakang untuk header */
+        color: #333; /* Warna teks untuk header */
+    }
+
+    .table-bordered tbody tr:nth-child(even) {
+        background-color: #f9f9f9; /* Warna latar belakang untuk baris genap */
+    }
+
+    .table-bordered tbody tr:hover {
+        background-color: #f2f2f2; /* Warna latar belakang saat hover */
+    }
+
+    .table-bordered img {
+        max-width: 100px; /* Lebar maksimum untuk gambar */
+        height: auto; /* Tinggi disesuaikan sesuai proporsi aslinya */
+        display: block; /* Hapus ruang tambahan di bawah gambar */
+        margin: 0 auto; /* Posisi gambar di tengah sel */
+    }
+</style>
+
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+    <!-- Content Header (Page header) -->
+    <section class="content-header">
+        <div class="container-fluid">
+            <div class="row mb-2">
+                <div class="col-sm-6">
+                    <h1><strong>Data Kader</strong></h1>
+                </div>
+            </div>
+        </div><!-- /.container-fluid -->
+    </section>
+    <!-- /.content-header -->
+    <!-- Main content -->
+    <section class="content">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="card">
+                        <!-- /.card-header -->
+                        <div class="card-body">
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th style="width: 10px">ID KADER</th>
+                                        <th>NAMA LENGKAP</th>
+                                        <th>ALAMAT</th>
+                                        <th>TANGGAL LAHIR</th>
+                                        <th>PEKERJAAN</th>
+                                        <th>JENIS KELAMIN</th>
+                                        <th>AGAMA</th>
+                                        <th>PAS FOTO</th> <!-- Kolom baru untuk Foto -->
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    {% for rs in data %}
+                                    <tr>
+                                        <td>{{ loop.index }}</td>
+                                        <td>{{ rs.1 }}</td>
+                                        <td>{{ rs.2 }}</td>
+                                        <td>{{ rs.3 }}</td>
+                                        <td>{{ rs.4 }}</td>
+                                        <td>{{ rs.5 }}</td>
+                                        <td>{{ rs.6 }}</td>
+                                        <td><img src="{{ url_for('uploaded_file', filename=rs[7]) }}" alt="Foto"></td>
+                                    </tr>
+                                    {% endfor %}
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!-- /.container-fluid -->
+    </section>
+    <!-- /.content -->
+</div>
+<!-- /.content-wrapper -->
+
+{% include 'footer.html' %}

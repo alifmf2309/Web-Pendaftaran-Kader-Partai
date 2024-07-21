@@ -1,0 +1,88 @@
+{% include 'header.html' %}
+
+</br>
+</br>
+
+<style>
+  .content-wrapper {
+    padding: 20px; /* Tambahkan padding di sekitar konten */
+  }
+
+  .table {
+    width: 100%;
+    margin-top: 20px; /* Jarak antara header dengan tabel */
+    border: 1px solid #ddd; /* Garis tepi keseluruhan tabel */
+    border-collapse: collapse; /* Gabungkan garis tepi sel */
+  }
+
+  .table th,
+  .table td {
+    padding: 8px; /* Atur padding untuk sel tabel */
+    text-align: center; /* Pusatkan teks di sel tabel */
+    border: 1px solid #ddd; /* Garis tepi sel */
+  }
+
+  .table th {
+    background-color: #f2f2f2; /* Warna latar belakang untuk header */
+    color: #333; /* Warna teks untuk header */
+  }
+
+  .table tbody tr:nth-child(even) {
+    background-color: #f9f9f9; /* Warna latar belakang untuk baris genap */
+  }
+
+  .table tbody tr:hover {
+    background-color: #f2f2f2; /* Warna latar belakang saat hover */
+  }
+</style>
+
+<!-- Content Wrapper. Contains page content -->
+<div class="content-wrapper">
+  <!-- Content Header (Page header) -->
+  <section class="content-header">
+    <div class="container-fluid">
+      <div class="row mb-2">
+        <div class="col-sm-6">
+          <h1><strong>Data Kader</strong></h1>
+        </div>
+      </div>
+    </div><!-- /.container-fluid -->
+  </section>
+  <!-- /.content-header -->
+  <!-- Main content -->
+  <section class="content">
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="card">
+            <!-- /.card-header -->
+            <div class="card-body">
+              <table class="table table-bordered">
+                <thead>
+                  <tr>
+                    <th style="width: 10px">ID KADER</th>
+                    <th>STATUS</th>
+                    <th>TANGGAL REGISTRASI</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  {% for rs in data %}
+                  <tr>
+                    <td>{{ loop.index }}</td>
+                    <td>{{ rs.1 }}</td>
+                    <td>{{ rs.2 }}</td>
+                  </tr>
+                  {% endfor %}
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div><!-- /.container-fluid -->
+  </section>
+  <!-- /.content -->
+</div>
+<!-- /.content-wrapper -->
+
+{% include 'footer.html' %}
